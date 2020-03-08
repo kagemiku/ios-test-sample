@@ -17,6 +17,26 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setup()
     }
 
+    private func setup() {
+        idTextField.textContentType = .username
+        passwordTextField.textContentType = .password
+        passwordTextField.isSecureTextEntry = true
+    }
+
+    private func validate(id: String, password: String) -> Bool {
+        return !id.isEmpty && !password.isEmpty
+    }
+
+    // MARK: IBActions
+
+    @IBAction private func didTapLoginButton(_ sender: Any) {
+        guard let id = idTextField.text, let password = passwordTextField.text else { return }
+
+        let result = validate(id: id, password: password)
+        print(result)
+    }
 }
