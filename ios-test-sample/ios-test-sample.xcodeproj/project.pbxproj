@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		105F1F0B24151B2A008BA15E /* PageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F1F0A24151B2A008BA15E /* PageObject.swift */; };
+		105F1F0D24151E8D008BA15E /* LoginPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F1F0C24151E8D008BA15E /* LoginPageObject.swift */; };
 		107A4E042414CC210066BBDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A4E032414CC210066BBDE /* AppDelegate.swift */; };
 		107A4E062414CC210066BBDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A4E052414CC210066BBDE /* SceneDelegate.swift */; };
 		107A4E0D2414CC240066BBDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107A4E0C2414CC240066BBDE /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		105F1F0A24151B2A008BA15E /* PageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObject.swift; sourceTree = "<group>"; };
+		105F1F0C24151E8D008BA15E /* LoginPageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageObject.swift; sourceTree = "<group>"; };
 		107A4E002414CC210066BBDE /* ios-test-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-test-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		107A4E032414CC210066BBDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107A4E052414CC210066BBDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				107A4E482414D79A0066BBDE /* LoginViewControllerUITests.swift */,
+				105F1F0C24151E8D008BA15E /* LoginPageObject.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				107A4E492414D79A0066BBDE /* LoginViewControllerUITests.swift in Sources */,
+				105F1F0D24151E8D008BA15E /* LoginPageObject.swift in Sources */,
 				105F1F0B24151B2A008BA15E /* PageObject.swift in Sources */,
 				107A4E4A2414D95F0066BBDE /* AccesibilityIdentifiers.swift in Sources */,
 			);
