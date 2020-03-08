@@ -12,6 +12,10 @@ class TopViewController: UIViewController {
 
     var id: String = ""
 
+    // MARK: IBOutlets
+
+    @IBOutlet private weak var welcomeLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +24,8 @@ class TopViewController: UIViewController {
 
     private func setup() {
         title = id
+
+        welcomeLabel.accessibilityIdentifier = AccesibilityIdentifiers.Top.welcomeLabel.rawValue
     }
 
 }

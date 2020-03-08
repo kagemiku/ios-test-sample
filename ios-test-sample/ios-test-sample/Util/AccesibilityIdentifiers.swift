@@ -16,4 +16,8 @@ enum AccesibilityIdentifiers {
         case loginButton
     }
 
+    enum Top: String {
+        case welcomeLabel
+    }
+
 }
