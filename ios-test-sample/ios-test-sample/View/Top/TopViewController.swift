@@ -25,7 +25,8 @@ class TopViewController: UIViewController {
     private func setup() {
         title = id
 
-        welcomeLabel.accessibilityIdentifier = AccesibilityIdentifiers.Top.welcomeLabel.rawValue
+        view.accessibilityIdentifier = AccesibilityIdentifier.topView.rawValue
+        welcomeLabel.accessibilityIdentifier = AccesibilityIdentifier.topWelcomeLabel.rawValue
     }
 
 }

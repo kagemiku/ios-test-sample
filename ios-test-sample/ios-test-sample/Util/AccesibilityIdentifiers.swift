@@ -8,16 +8,22 @@
 
 import Foundation
 
-enum AccesibilityIdentifiers {
+protocol AccesibilityIdentifierProtocol {
+    var rawValue: String { get }
+}
 
-    enum Login: String {
-        case idTextField
-        case passwordTextField
-        case loginButton
-    }
+enum AccesibilityIdentifier: String, AccesibilityIdentifierProtocol {
 
-    enum Top: String {
-        case welcomeLabel
-    }
+    // MARK: Login
+
+    case loginView = "com.kagemiku.login.view"
+    case loginIDTextField = "com.kagemiku.login.id_text_field"
+    case loginPasswordTextField = "com.kagemiku.login.password_text_field"
+    case loginLoginButton = "com.kagemiku.login.login_button"
+
+    // MARK: Top
+
+    case topView = "com.kagemiku.top.view"
+    case topWelcomeLabel = "com.kagemiku.top.welcome_label"
 
 }

@@ -19,15 +19,15 @@ class LoginViewControllerUITests: XCTestCase {
 
     func testLogin() {
         let app = XCUIApplication()
-        let idTextField = app.textFields[AccesibilityIdentifiers.Login.idTextField.rawValue]
-        let passwordTextField = app.secureTextFields[AccesibilityIdentifiers.Login.passwordTextField.rawValue]
-        let loginButton = app.buttons[AccesibilityIdentifiers.Login.loginButton.rawValue]
-        let navBar = app.navigationBars.firstMatch
+        let loginView = app.otherElements[AccesibilityIdentifier.loginView.rawValue]
+        let idTextField = app.textFields[AccesibilityIdentifier.loginIDTextField.rawValue]
+        let passwordTextField = app.secureTextFields[AccesibilityIdentifier.loginPasswordTextField.rawValue]
+        let loginButton = app.buttons[AccesibilityIdentifier.loginLoginButton.rawValue]
 
+        XCTAssertTrue(loginView.exists)
         XCTAssertTrue(idTextField.exists)
         XCTAssertTrue(passwordTextField.exists)
         XCTAssertTrue(loginButton.exists)
-        XCTAssertTrue(navBar.exists)
 
         idTextField.tap()
         idTextField.typeText("kagemiku")
@@ -35,9 +35,8 @@ class LoginViewControllerUITests: XCTestCase {
         passwordTextField.typeText("password")
         loginButton.tap()
 
-        let welcomeLabel = app.staticTexts[AccesibilityIdentifiers.Top.welcomeLabel.rawValue]
-        XCTAssertTrue(welcomeLabel.waitForExistence(timeout: 1.0))
-        XCTAssertEqual(navBar.title, "kagemiku")
+        let topView = app.otherElements[AccesibilityIdentifier.topView.rawValue]
+        XCTAssertTrue(topView.waitForExistence(timeout: 1.0))
     }
 
 

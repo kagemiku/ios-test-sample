@@ -23,14 +23,16 @@ class LoginViewController: UIViewController {
     }
 
     private func setup() {
+        view.accessibilityIdentifier = AccesibilityIdentifier.loginView.rawValue
+
         idTextField.textContentType = .username
-        idTextField.accessibilityIdentifier = AccesibilityIdentifiers.Login.idTextField.rawValue
+        idTextField.accessibilityIdentifier = AccesibilityIdentifier.loginIDTextField.rawValue
 
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.accessibilityIdentifier = AccesibilityIdentifiers.Login.passwordTextField.rawValue
+        passwordTextField.accessibilityIdentifier = AccesibilityIdentifier.loginPasswordTextField.rawValue
 
-        loginButton.accessibilityIdentifier = AccesibilityIdentifiers.Login.loginButton.rawValue
+        loginButton.accessibilityIdentifier = AccesibilityIdentifier.loginLoginButton.rawValue
     }
 
     private func validate(id: String, password: String) -> Bool {
