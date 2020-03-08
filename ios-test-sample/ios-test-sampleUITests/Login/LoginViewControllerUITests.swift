@@ -19,25 +19,37 @@ class LoginViewControllerUITests: XCTestCase {
 
     func testLogin() {
         let app = XCUIApplication()
-        let loginView = app.otherElements[AccesibilityIdentifier.loginView.rawValue]
-        let idTextField = app.textFields[AccesibilityIdentifier.loginIDTextField.rawValue]
-        let passwordTextField = app.secureTextFields[AccesibilityIdentifier.loginPasswordTextField.rawValue]
-        let loginButton = app.buttons[AccesibilityIdentifier.loginLoginButton.rawValue]
 
-        XCTAssertTrue(loginView.exists)
-        XCTAssertTrue(idTextField.exists)
-        XCTAssertTrue(passwordTextField.exists)
-        XCTAssertTrue(loginButton.exists)
+        XCTContext.runActivity(named: "Login view is shown") { _ in
+            let loginView = app.otherElements[AccesibilityIdentifier.loginView.rawValue]
+            XCTAssertTrue(loginView.exists)
+        }
 
-        idTextField.tap()
-        idTextField.typeText("kagemiku")
-        passwordTextField.tap()
-        passwordTextField.typeText("password")
-        loginButton.tap()
+        XCTContext.runActivity(named: "Input ID and Password") { _ in
+            let idTextField = app.textFields[AccesibilityIdentifier.loginIDTextField.rawValue]
+            let passwordTextField = app.secureTextFields[AccesibilityIdentifier.loginPasswordTextField.rawValue]
 
-        let topView = app.otherElements[AccesibilityIdentifier.topView.rawValue]
-        XCTAssertTrue(topView.waitForExistence(timeout: 1.0))
+            XCTAssertTrue(idTextField.exists)
+            XCTAssertTrue(passwordTextField.exists)
+
+            idTextField.tap()
+            idTextField.typeText("kagemiku")
+            passwordTextField.tap()
+            passwordTextField.typeText("password")
+        }
+
+        XCTContext.runActivity(named: "Login") { _ in
+            let loginButton = app.buttons[AccesibilityIdentifier.loginLoginButton.rawValue]
+
+            XCTAssertTrue(loginButton.exists)
+
+            loginButton.tap()
+        }
+
+        XCTContext.runActivity(named: "Top view is shown") { _ in
+            let topView = app.otherElements[AccesibilityIdentifier.topView.rawValue]
+            XCTAssertTrue(topView.waitForExistence(timeout: 1.0))
+        }
     }
-
 
 }
