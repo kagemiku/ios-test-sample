@@ -36,7 +36,10 @@ class LoginViewController: UIViewController {
     @IBAction private func didTapLoginButton(_ sender: Any) {
         guard let id = idTextField.text, let password = passwordTextField.text else { return }
 
-        let result = validate(id: id, password: password)
-        print(result)
+        if validate(id: id, password: password) {
+            let vc = TopViewController()
+            vc.id = id
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
