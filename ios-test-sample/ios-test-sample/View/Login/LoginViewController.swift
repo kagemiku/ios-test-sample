@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet private weak var idTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var loginButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,13 @@ class LoginViewController: UIViewController {
 
     private func setup() {
         idTextField.textContentType = .username
+        idTextField.accessibilityIdentifier = AccesibilityIdentifiers.Login.idTextField.rawValue
+
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.accessibilityIdentifier = AccesibilityIdentifiers.Login.passwordTextField.rawValue
+
+        loginButton.accessibilityIdentifier = AccesibilityIdentifiers.Login.loginButton.rawValue
     }
 
     private func validate(id: String, password: String) -> Bool {

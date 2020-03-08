@@ -15,6 +15,10 @@ class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setup()
+    }
+
+    private func setup() {
         title = id
     }
 

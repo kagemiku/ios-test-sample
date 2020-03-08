@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ios_test_sample" customModuleProvider="target">
             <connections>
                 <outlet property="idTextField" destination="EFc-Xg-W7W" id="qv3-us-iht"/>
+                <outlet property="loginButton" destination="xD0-bl-MRe" id="sMo-o8-i9w"/>
                 <outlet property="passwordTextField" destination="6Zw-cC-3so" id="LZh-D4-sPG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
