@@ -52,4 +52,13 @@ class LoginViewControllerUITests: XCTestCase {
         }
     }
 
+    func testLogin_pageObject() {
+        let app = XCUIApplication()
+        let loginPage = LoginPageObject(application: app)
+        XCTAssertTrue(loginPage.pageExists)
+
+        let topPage = loginPage.login()
+        XCTAssertTrue(topPage.pageExists)
+    }
+
 }
