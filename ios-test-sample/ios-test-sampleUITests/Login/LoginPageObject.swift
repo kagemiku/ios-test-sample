@@ -36,15 +36,17 @@ final class LoginPageObject: PageObjectProtocol {
         self.app = application
     }
 
-    func login() -> Void {
+    func login() -> TopPageObject {
         XCTContext.runActivity(named: "Login") { _ in
+            idTextField.tap()
             idTextField.typeText("kagemiku")
+            passwordTextField.tap()
             passwordTextField.typeText("password")
 
             loginButton.tap()
         }
 
-        return ()
+        return TopPageObject(application: app)
     }
 
 }
