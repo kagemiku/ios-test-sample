@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		105F1F0B24151B2A008BA15E /* PageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F1F0A24151B2A008BA15E /* PageObject.swift */; };
+		105F1F0D24151E8D008BA15E /* LoginPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F1F0C24151E8D008BA15E /* LoginPageObject.swift */; };
+		105F1F1024152067008BA15E /* TopPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F1F0F24152067008BA15E /* TopPageObject.swift */; };
 		107A4E042414CC210066BBDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A4E032414CC210066BBDE /* AppDelegate.swift */; };
 		107A4E062414CC210066BBDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A4E052414CC210066BBDE /* SceneDelegate.swift */; };
 		107A4E0D2414CC240066BBDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107A4E0C2414CC240066BBDE /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		105F1F0A24151B2A008BA15E /* PageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObject.swift; sourceTree = "<group>"; };
+		105F1F0C24151E8D008BA15E /* LoginPageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageObject.swift; sourceTree = "<group>"; };
+		105F1F0F24152067008BA15E /* TopPageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPageObject.swift; sourceTree = "<group>"; };
 		107A4E002414CC210066BBDE /* ios-test-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-test-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		107A4E032414CC210066BBDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107A4E052414CC210066BBDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		105F1F0924151B16008BA15E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				105F1F0A24151B2A008BA15E /* PageObject.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		105F1F0E2415200B008BA15E /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				105F1F0F24152067008BA15E /* TopPageObject.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
 		107A4DF72414CC210066BBDE = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +151,9 @@
 		107A4E242414CC250066BBDE /* ios-test-sampleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				105F1F0924151B16008BA15E /* Protocol */,
 				107A4E472414D7810066BBDE /* Login */,
+				105F1F0E2415200B008BA15E /* Top */,
 				107A4E272414CC250066BBDE /* Info.plist */,
 			);
 			path = "ios-test-sampleUITests";
@@ -174,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				107A4E482414D79A0066BBDE /* LoginViewControllerUITests.swift */,
+				105F1F0C24151E8D008BA15E /* LoginPageObject.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -331,7 +356,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				107A4E492414D79A0066BBDE /* LoginViewControllerUITests.swift in Sources */,
+				105F1F0D24151E8D008BA15E /* LoginPageObject.swift in Sources */,
+				105F1F0B24151B2A008BA15E /* PageObject.swift in Sources */,
 				107A4E4A2414D95F0066BBDE /* AccesibilityIdentifiers.swift in Sources */,
+				105F1F1024152067008BA15E /* TopPageObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
