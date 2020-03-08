@@ -1,0 +1,17 @@
+name: iOS
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: xcodebuild test
+      run: xcodebuild clean test -project ios-test-sample/ios-test-sample.xcodeproj -scheme ios-test-sample -destination "platform=iOS Simulator,name=iPhone 11"
