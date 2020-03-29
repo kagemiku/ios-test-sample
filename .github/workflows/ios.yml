@@ -13,5 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Show selected Xcode version
+      run: xcodebuild -version
     - name: xcodebuild test
       run: xcodebuild clean test -project ios-test-sample/ios-test-sample.xcodeproj -scheme ios-test-sample -destination "platform=iOS Simulator,name=iPhone 11"
